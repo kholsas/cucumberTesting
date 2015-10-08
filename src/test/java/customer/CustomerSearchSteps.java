@@ -21,6 +21,10 @@ public class CustomerSearchSteps {
 
     CustomerService customerService = new CustomerServiceImpl();
     Set<Customer> resultList = new HashSet<>();
+ 
+    {
+        System.out.println("#########  Constracting " + this.getClass());
+    }
 
     @Given(".+customer with a name '(.+)', and id number '(\\d+)', and surname '(.+)', with identity number '(.+)', and aged '(\\d+)' this year$")
     public void addCustomer(String firstName, int id, String lastName, String identity, int age) {
@@ -36,7 +40,6 @@ public class CustomerSearchSteps {
     @When("^the user searches for customers with age between (\\d+) and (\\d+)$")
     public void executeSearch(int minAge, int maxAge) {
         List<Customer> customerList = customerService.getCustomerWithAgeBetween(minAge, maxAge);
-
         resultList.addAll(customerList);
     }
 
@@ -48,7 +51,7 @@ public class CustomerSearchSteps {
     //customer 1 should have a name 'Kholofelo'
     @Then("customer (\\d+) should have a name '(.+)'$")
     public void verifyPositionByAge(int position, String name) {
-        assertThat(((Customer)resultList.toArray()[position - 1]).getFirstName(), equalTo(name));
+        assertThat(((Customer) resultList.toArray()[position - 1]).getFirstName(), equalTo(name));
     }
 
     @When("^the user retrieves all customers$")

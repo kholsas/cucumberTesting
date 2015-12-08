@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features={"src/test/resources/customer"},
-        glue ={"customer.steps"}
+        glue ={"customer"}
 )
 public class CustomerSearchTest {
 

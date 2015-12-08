@@ -1,8 +1,8 @@
-package com.psybergate.testing.cucumber.service;
+package za.co.kholofelo.testing.cucumber.service;
 
-import com.psybergate.testing.cucumber.data.CustomerManager;
-import com.psybergate.testing.cucumber.data.CustomerManagerImpl;
-import com.psybergate.testing.cucumber.entity.Customer;
+import za.co.kholofelo.testing.cucumber.data.CustomerManager;
+import za.co.kholofelo.testing.cucumber.data.CustomerManagerImpl;
+import za.co.kholofelo.testing.cucumber.entity.Customer;
 
 import java.util.List;
 

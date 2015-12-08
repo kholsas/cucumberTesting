@@ -1,8 +1,8 @@
-package customer.steps;
+package customer;
 
-import com.psybergate.testing.cucumber.entity.Customer;
-import com.psybergate.testing.cucumber.service.CustomerService;
-import com.psybergate.testing.cucumber.service.CustomerServiceImpl;
+import za.co.kholofelo.testing.cucumber.entity.Customer;
+import za.co.kholofelo.testing.cucumber.service.CustomerService;
+import za.co.kholofelo.testing.cucumber.service.CustomerServiceImpl;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -21,7 +21,7 @@ public class CustomerSearchSteps {
 
     CustomerService customerService = new CustomerServiceImpl();
     Set<Customer> resultList = new HashSet<>();
- 
+
     {
         System.out.println("#########  Constracting " + this.getClass());
     }
@@ -43,7 +43,7 @@ public class CustomerSearchSteps {
         resultList.addAll(customerList);
     }
 
-    @Then("^(\\d+) customers should have been found$")
+    @Then("^(\\d+) customers should been found$")
     public void testReturnedNumberOfCustomers(final int total) {
         assertThat(resultList.size(), equalTo(total));
     }

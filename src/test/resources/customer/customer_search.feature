@@ -6,7 +6,7 @@ Feature: Customer Search
       And another customer with a name 'Tom', and id number '2', and surname 'Coffeeman', with identity number '765433456785', and aged '29' this year
       And another customer with a name 'Merlyn', and id number '3', and surname 'Tubman', with identity number '78686858584', and aged '80' this year
     When the user searches for customers with age between 18 and 50
-    Then 2 customers should have been found
+    Then 2 customers should be found
       And customer 1 should have a name 'Kholofelo'
       And customer 2 should have a name 'Tom'
 

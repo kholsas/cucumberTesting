@@ -1,6 +1,6 @@
-package com.psybergate.testing.cucumber.data;
+package za.co.kholofelo.testing.cucumber.data;
 
-import com.psybergate.testing.cucumber.entity.Customer;
+import za.co.kholofelo.testing.cucumber.entity.Customer;
 
 import java.util.ArrayList;
 import java.util.HashMap;

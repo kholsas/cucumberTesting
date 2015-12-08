@@ -1,4 +1,4 @@
-package com.psybergate.testing.cucumber.entity;
+package za.co.kholofelo.testing.cucumber.entity;
 
 /**
  * Created by Kholofelo Maloma on 07  October  2015.
